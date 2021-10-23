@@ -12,7 +12,7 @@ class Subsession(BaseSubsession):
 class Group(BaseGroup):
     pass
 class Player(BasePlayer):
-    age = models.IntegerField(label='What is your age', max=125, min=13)
+    age1 = models.IntegerField(label='What is your age', max=125, min=13)
     gender = models.StringField(choices=[['Male', 'Male'], ['Female', 'Female']], label='What is your gender', widget=widgets.RadioSelect)
     crt_bat = models.IntegerField(label='A bat and a ball cost 22 dollars in total The bat costs 20 dollars more than the ball How many dollars does the ball cost')
     crt_widget = models.IntegerField(label='If it takes 5 machines 5 minutes to make 5 widgets how many minutes would it take 100 machines to make 100 widgets')
@@ -20,7 +20,7 @@ class Player(BasePlayer):
     my_field = models.CurrencyField()
 class Demographics(Page):
     form_model = 'player'
-    form_fields = ['age', 'gender']
+    form_fields = ['age1', 'gender']
 class CognitiveReflectionTest(Page):
     form_model = 'player'
     form_fields = ['crt_bat', 'crt_widget', 'crt_lake']
